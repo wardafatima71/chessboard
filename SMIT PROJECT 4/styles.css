@@ -1,0 +1,59 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkq3_wg88_Ii6O3EjYX3zSPlYm4FsyuOIyWA&usqp=CAU);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.chessboard {
+  border: 4px solid rgb(0, 0, 0);
+  width: 60%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.chessboard div {
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 2px 1px 2px white;
+  width: 10%;
+  height: 80px;
+  width: calc(100% / 8);
+}
+.a {
+  background-color: white;
+  width: 10%;
+  height: 80px;
+}
+
+.b {
+  background-color: rgb(0, 0, 0);
+  width: 10%;
+  height: 80px;
+}
+/* For small screens (up to 600px) */
+@media screen and (max-width: 600px) {
+  .chessboard {
+    width: 95%; /* Adjust the chessboard width to fit small screens */
+    height: auto; /* Allow the height to adjust based on the content */
+  }
+
+  .chessboard div {
+    font-size: 30px; /* Reduce the font size for better readability */
+    height: 50px; /* Adjust height of each square */
+  }
+}
+
+/* For medium screens (between 600px and 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .chessboard {
+    width: 80%; /* Make the chessboard a bit larger for tablets */
+    height: auto;
+  }
+
+  .chessboard div {
+    font-size: 40px; /* Slightly larger font size for better readability */
+    height: 60px;
+  }
+}
